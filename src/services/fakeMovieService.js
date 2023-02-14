@@ -8,6 +8,7 @@ const movies = [
     numberInStock: 6,
     dailyRentalRate: 2.5,
     publishDate: "2010-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -17,6 +18,7 @@ const movies = [
     numberInStock: 5,
     dailyRentalRate: 2.5,
     publishDate: "2011-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -26,6 +28,7 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 2.5,
     publishDate: "2012-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -35,6 +38,7 @@ const movies = [
     numberInStock: 6,
     dailyRentalRate: 2.5,
     publishDate: "2013-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -44,6 +48,7 @@ const movies = [
     numberInStock: 5,
     dailyRentalRate: 2.5,
     publishDate: "2014-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -53,6 +58,7 @@ const movies = [
     numberInStock: 6,
     dailyRentalRate: 2.5,
     publishDate: "2015-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -62,6 +68,7 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 2.5,
     publishDate: "2016-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -71,6 +78,7 @@ const movies = [
     numberInStock: 6,
     dailyRentalRate: 2.5,
     publishDate: "2017-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -80,6 +88,7 @@ const movies = [
     numberInStock: 5,
     dailyRentalRate: 2.5,
     publishDate: "2018-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -89,6 +98,7 @@ const movies = [
     numberInStock: 6,
     dailyRentalRate: 2.5,
     publishDate: "2019-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -98,6 +108,7 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 2.5,
     publishDate: "2018-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -107,6 +118,7 @@ const movies = [
     numberInStock: 3,
     dailyRentalRate: 2.5,
     publishDate: "2016-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -116,6 +128,7 @@ const movies = [
     numberInStock: 4,
     dailyRentalRate: 2.5,
     publishDate: "2017-01-03T19:04:28.809Z",
+    liked: false,
   },
 
   {
@@ -125,6 +138,7 @@ const movies = [
     numberInStock: 7,
     dailyRentalRate: 2.5,
     publishDate: "2015-01-03T19:04:28.809Z",
+    liked: false,
   },
 ];
 
