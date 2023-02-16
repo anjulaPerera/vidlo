@@ -9,36 +9,24 @@ class LoginForm extends Component {
   };
 
   schema = {
-    username: Joi.string().required(),
-    password: Joi.string().required(),
+    username: Joi.string().required().label("Username"),
+    password: Joi.string().required().label("Password"),
   };
 
   validate = () => {
-    const result = Joi.validate(this.state.account, this.schema, {
-      abortEarly: false,
-    });
-    console.log(result);
-
+    const options = { abortEarly: false };
+    const { error } = Joi.validate(this.state.account, this.schema, options);
+    if (!error) return null;
     const errors = {};
-    const { account } = this.state;
-
-    if (account.username.trim() === "")
-      errors.username = "username is required";
-    if (account.password.trim() === "")
-      errors.password = "password is required";
-
-    return Object.keys(errors).length === 0 ? null : errors;
+    for (let item of error.details) errors[item.path[0]] = item.message;
+    return errors;
   };
 
   validateProperty = ({ name, value }) => {
-    if (name === "username") {
-      if (value.trim() === "") return "username is required";
-      //...other rules
-    }
-    if (name === "password") {
-      if (value.trim() === "") return "password is required";
-      //...other rules
-    }
+    const obj = { [name]: value };
+    const schema = { [name]: this.schema[name] };
+    const { error } = Joi.validate(obj, schema);
+    return error ? error.details[0].message : null;
   };
 
   handleSubmit = (event) => {
@@ -46,7 +34,6 @@ class LoginForm extends Component {
     const errors = this.validate();
     this.setState({ errors: errors || {} });
     if (errors) return;
-
     // Call the server and save the changes and redirect
     console.log("submitted");
   };
